@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import '../../App.css';
 import Button from "../Button/Button";
 import CountDownTimer from "../CountDownTimer/CountDownTimer";
@@ -70,10 +70,12 @@ const Question = () => {
 
     return (
         <div className="question-container">
-            <ProgressBar current={currentQuestionIndex} total={questions.length} />
+            <p className="main-description"><CountDownTimer onTimeUp={handleTimeUp} /> </p>
+            <ProgressBar current={correctAnswers} total={questions.length} />
+            <p className="pointsDisplay" >{state.points}/280</p>
 
             <div className="App">
-                <p className="question-text">{currentQuestion.question}</p>
+                <p className="main-description">Q{currentQuestionIndex+1}:{currentQuestion.question} {currentQuestion.points}</p>
 
                 <div className="options-container">
                     {currentQuestion.options.map((option, i) => {
@@ -107,12 +109,12 @@ const Question = () => {
                         text={currentQuestionIndex === questions.length - 1 ? "Submit" : "Next"}
                         onClick={handleNext}
                     />
-                </div>
-
-                <div className="timer-container">
-                    <CountDownTimer onTimeUp={handleTimeUp} />
 
                 </div>
+
+
+
+
             </div>
         </div>
     );

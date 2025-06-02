@@ -148,6 +148,12 @@
   color: white;
   border: none;
 }
+.pointsDisplay{
+  display: inline-block;
+  font-size: 1rem;
+  color:oklch(98.4% 0.019 200.873);
+  margin-left: 330px;
+}
 
 .timer-container {
   margin-top: 40px;

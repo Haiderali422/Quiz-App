@@ -21,6 +21,7 @@ const MainScreen = () => {
                 ) : state.finished ? (
                     <FinishScreen />
                 ) : (
+
                     <Question />
                 )}
             </div>
