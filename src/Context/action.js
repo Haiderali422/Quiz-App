@@ -1,0 +1,8 @@
+export const SET_QUESTIONS = 'SET_QUESTIONS';
+export const INCREMENT_SCORE = 'INCREMENT_SCORE';
+export const NEXT_QUESTION = 'NEW_QUESTION';
+export const SELECT_OPTION = 'SELECT_OPTION';
+export const START_QUIZ = 'START_QUIZ';
+export const RESTART_QUIZ = 'RESTART_QUIZ';
+export const FINISH_QUIZ = "FINISH_QUIZ";
+export const INCREMENT_POINTS = 'INCREMENT_POINTS';
